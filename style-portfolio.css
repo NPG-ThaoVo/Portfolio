@@ -4857,7 +4857,8 @@ body {
 
 .hero-section {
     padding-top: 280px;
-    padding-bottom: 210px;
+    height: 100vh;
+    position: relative;
     background-image: url("https://assets.website-files.com/627b5d7db9a3475b4420c032/627b6ce5c3b6e44ec3e474f3_Hero%20Banner.png");
     background-position: 50% 50%;
     background-size: cover;
@@ -4979,7 +4980,7 @@ body {
 }
 
 .my-portfolio-section {
-    padding-top: 130px;
+    padding-top: 100px;
 }
 
 .container {
@@ -5028,8 +5029,8 @@ body {
 }
 
 .my-portfolio-singel-wrapper {
-    margin-bottom: 60px;
-    padding: 28px;
+    padding: 70px;
+    margin-bottom: 70px;
     border-radius: 40px;
     background-color: #ffe8e8;
 }
@@ -5054,15 +5055,28 @@ body {
     grid-template-rows: auto;
 }
 
+.my-portfolio-grid .portfolio-left-content,
+.my-portfolio-grid .portfolio-right-content {
+    height: 100%;
+}
+
 .my-portfolio-grid.two {
     -ms-grid-columns: 1.25fr 1fr;
     grid-template-columns: 1.25fr 1fr;
 }
 
 .portfolio-info-wrapper {
-    padding: 115px 60px;
+    padding: 60px;
     border-radius: 40px;
     background-color: #fff;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-info-wrapper p {
+    line-height: 26px;
 }
 
 .portfolio-project-name-info {
@@ -5079,6 +5093,7 @@ body {
 
 .portfolio-project-name {
     color: #242f65;
+    font-size: 16px;
 }
 
 .portfolio-project-boder {
@@ -5102,6 +5117,11 @@ body {
 .portfolio-project-paragraph-text {
     margin-bottom: 0px;
     line-height: 26px;
+}
+
+.portfolio-info-wrapper strong {
+    margin: 15px 0 10px 0;
+    display: block;
 }
 
 .portfolio-project-paragraph-text._480-w {
@@ -5186,11 +5206,13 @@ body {
 }
 
 .work-skills-section {
-    height: 900px;
-    padding-top: 60px;
+    height: auto;
+    padding: 70px;
     background-image: url("https://assets.website-files.com/627b5d7db9a3475b4420c032/6284ef22bcc9355db5ca4c3c_Work%20Skills%20Bg.png");
     background-position: 0px 0px;
     background-size: auto;
+    border-radius: 40px;
+    margin-bottom: 70px;
 }
 
 .section-circel {
@@ -5401,7 +5423,7 @@ body {
 }
 
 .cta-main {
-    padding-bottom: 90px;
+    padding-bottom: 50px;
 }
 
 .cta-main.pd0 {
@@ -6454,7 +6476,7 @@ body {
 
 .about-hero-section {
     overflow: hidden;
-    padding-top: 120px;
+    padding-top: 40px;
     padding-bottom: 130px;
 }
 
@@ -6468,14 +6490,35 @@ body {
     background-repeat: no-repeat;
 }
 
+.about-left-contant {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.about-text-wrapper {
+    margin-bottom: 30px;
+}
+
 .about-hero-grid {
     grid-column-gap: 80px;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
 }
 
+.about-hero-image-wrapper {
+    display: flex;
+    justify-items: center;
+    align-items: flex-end;
+}
+
 .about-hero-image {
     width: 100%;
+    max-width: 250px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
 }
 
 .about-name-heading {
@@ -6505,11 +6548,11 @@ body {
 
 .about-education-section {
     overflow: hidden;
-    padding-bottom: 130px;
+    padding: 100px 0;
 }
 
 .about-education-wrapper {
-    margin-top: 55px;
+    margin-top: 30px;
 }
 
 .about-education-grid {
@@ -6543,6 +6586,9 @@ body {
 
 .about-education-image {
     width: 100%;
+    -webkit-animation: spin 7s linear infinite;
+    -moz-animation: spin 7s linear infinite;
+    animation: spin 7s linear infinite;
 }
 
 .about-education-text-wrapper {
@@ -6575,8 +6621,7 @@ body {
 }
 
 .about-work-experience-wrapper {
-    margin-bottom: 130px;
-    padding: 130px 70px;
+    padding: 100px 70px;
     border-radius: 40px;
     background-image: url("https://assets.website-files.com/627b5d7db9a3475b4420c032/6281eadcdf91e740c338a34c_CTA%20Three%20Bg.png");
     background-position: 50% 50%;
@@ -8906,8 +8951,7 @@ body {
     }
 
     .my-portfolio-section {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding: 0;
     }
 
     .section-heading {
@@ -9391,7 +9435,7 @@ body {
     }
 
     .about-education-section {
-        padding-bottom: 80px;
+        padding: 50px;
     }
 
     .about-education-grid {
@@ -9401,7 +9445,7 @@ body {
     }
 
     .about-work-experience-wrapper {
-        margin-bottom: 80px;
+        margin: 50px 0;
         padding: 40px 20px;
         border-radius: 20px;
     }
@@ -9960,6 +10004,14 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    .about-hero-image {
+        left: 20% !important;
+    }
+
+    .portfolio-project-name {
+        font-size: 13px;
+    }
+
     .hero-section {
         padding-top: 180px;
         padding-bottom: 100px;
@@ -10048,6 +10100,11 @@ body {
 
     .work-skills-section {
         height: 100%;
+        padding: 20px 0;
+    }
+
+    .portfolio-image {
+        border-radius: 20px !important;
     }
 
     .section-circel {
@@ -10086,6 +10143,7 @@ body {
 
     .cta-section {
         padding-bottom: 60px;
+        padding-top: 50px;
     }
 
     .cta-wrapper {
@@ -10927,7 +10985,7 @@ body {
 
     .portfolio-project-heading {
         margin-bottom: 15px;
-        font-size: 46px;
+        font-size: 35px;
         line-height: 50px;
     }
 
