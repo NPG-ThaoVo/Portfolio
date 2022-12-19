@@ -42579,7 +42579,7 @@
                     i = document,
                     o = e("html"),
                     a = e("body"),
-                    s = ".w-webflow-badge",
+                    // s = ".w-webflow-badge",
                     c = window.location,
                     u = /PhantomJS/i.test(navigator.userAgent),
                     l =
